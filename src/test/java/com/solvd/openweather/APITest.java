@@ -10,6 +10,7 @@ import java.lang.invoke.MethodHandles;
 
 public class APITest implements IAbstractTest {
     private static final Logger LOGGER = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
+    //Test case 1: Verify user get valid weather data for London, GB in celcium in english
     @Test
     public void testUserGetsValidWeatherDataForLondonBritainInCelsiumInEnglish() {
         GetWeatherMethod getWeatherMethod = new GetWeatherMethod();
