@@ -1,7 +1,9 @@
 package com.solvd.openweather;
+import com.zebrunner.carina.api.apitools.validation.JsonCompareKeywords;
 import com.zebrunner.carina.api.http.HttpResponseStatusType;
 import com.zebrunner.carina.core.IAbstractTest;
 import io.restassured.path.json.JsonPath;
+import org.skyscreamer.jsonassert.JSONCompareMode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
@@ -11,6 +13,17 @@ import java.lang.invoke.MethodHandles;
 public class APITest implements IAbstractTest {
     private static final Logger LOGGER = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
     //Test case 1: Verify user get valid weather data for London, GB in celcium in english
+    //{
+        //    "id": 2643743,
+        //    "name": "London",
+        //    "state": "",
+        //    "country": "GB",
+        //    "coord": {
+        //        "lon": -0.12574,
+        //        "lat": 51.50853
+        //    }
+        //}
+        // "timezone": 3600,
     @Test
     public void testUserGetsValidWeatherDataForLondonBritainInCelsiumInEnglish() {
         GetWeatherMethod getWeatherMethod = new GetWeatherMethod();
@@ -29,5 +42,8 @@ public class APITest implements IAbstractTest {
         Assert.assertTrue(new JsonPath(rs).getDouble("main.temp_max") < 33, "Maximal temperature is incorrect!");
         Assert.assertTrue(new JsonPath(rs).getDouble("coord.lon") > -0.5, "Longitude is incorrect!");
         Assert.assertTrue(new JsonPath(rs).getDouble("coord.lat") < 51.6, "Latitude is incorrect!");
+        getWeatherMethod.validateResponseAgainstSchema("_getweather/rs_weather.schema");
     }
-}
+
+    }
+
