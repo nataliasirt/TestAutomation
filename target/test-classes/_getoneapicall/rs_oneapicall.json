@@ -1,0 +1,272 @@
+{
+    "lat": "regex:[\\d]+.[\\d]+",
+    "lon": "regex:[\\d]+.[\\d]+",
+    "timezone": "Europe/Minsk",
+    "timezone_offset": "regex:[\\d]+",
+    "current": {
+        "dt": 1630415398,
+        "sunrise": 1630379795,
+        "sunset": 1630429439,
+        "temp": "regex:[\\d]+.[\\d]+",
+        "feels_like": "regex:[\\d]+.[\\d]+",
+        "pressure": 1008,
+        "humidity": 69,
+        "dew_point": "regex:[\\d]+.[\\d]+",
+        "uvi": "regex:[\\d]+.[\\d]+",
+        "clouds": 68,
+        "visibility": 10000,
+        "wind_speed": "regex:[\\d]+.[\\d]+",
+        "wind_deg": 244,
+        "wind_gust": "regex:[\\d]+.[\\d]+",
+        "weather": [
+            {
+                "id": 803,
+                "main": "Clouds",
+                "description": "broken clouds",
+                "icon": "04d"
+            }
+        ]
+    },
+    "minutely": [
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        },
+        {
+            "dt": "regex:[\\d]+",
+            "precipitation": "regex:[\\d]+"
+        }
+    ]
+}
