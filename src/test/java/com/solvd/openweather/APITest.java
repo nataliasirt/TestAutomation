@@ -53,7 +53,6 @@ public class APITest implements IAbstractTest {
         getWeatherMethod.callAPI();
         getWeatherMethod.validateResponseAgainstSchema("_getweather/rs_weather.schema");
     }
-
     @Test
     //Test case 4: Verify that the user gets valid data by lat and lon example Kyiv, UA
     public void testUserGetsValidWeatherDataByLatAndLon() {
