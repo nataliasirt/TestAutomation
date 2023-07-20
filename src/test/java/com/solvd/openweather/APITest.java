@@ -1,9 +1,7 @@
 package com.solvd.openweather;
-import com.zebrunner.carina.api.apitools.validation.JsonCompareKeywords;
 import com.zebrunner.carina.api.http.HttpResponseStatusType;
 import com.zebrunner.carina.core.IAbstractTest;
 import io.restassured.path.json.JsonPath;
-import org.skyscreamer.jsonassert.JSONCompareMode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
@@ -43,9 +41,21 @@ public class APITest implements IAbstractTest {
         getWeatherMethod.callAPI();
         getWeatherMethod.validateResponseAgainstSchema("_getweather/rs_weather.schema");
     }
+    @Test
+    //Test case 3: Verify user get valid weather data for Madrid, Spain in Fahrenheit in English
+    public void testUserGetsValidWeatherDataForMadridInEnglish() {
+        GetWeatherMethod getWeatherMethod = new GetWeatherMethod();
+        getWeatherMethod.addParameter("q", "Madrid");
+        getWeatherMethod.addParameter("units", "imperial");
+        getWeatherMethod.addParameter("lang", "en");
+        getWeatherMethod.addParameter("appid", "18ea40b1276c29a5b18dff1d740509f4");
+        getWeatherMethod.expectResponseStatus(HttpResponseStatusType.OK_200);
+        getWeatherMethod.callAPI();
+        getWeatherMethod.validateResponseAgainstSchema("_getweather/rs_weather.schema");
+    }
 
     @Test
-    //Test case 3: Verify that the user gets valid data by lat and lon ex. Kyiv, UA
+    //Test case 4: Verify that the user gets valid data by lat and lon example Kyiv, UA
     public void testUserGetsValidWeatherDataByLatAndLon() {
         GetWeatherMethodByLonLat getWeatherMethodByLonLat = new GetWeatherMethodByLonLat(30.5167, 50.4333);
         getWeatherMethodByLonLat.addParameter("appid", "18ea40b1276c29a5b18dff1d740509f4");
@@ -55,8 +65,8 @@ public class APITest implements IAbstractTest {
         getWeatherMethodByLonLat.validateResponseAgainstSchema("_getweather/rs_weather.schema");
     }
     @Test
-    //Test case 4:Verify, that the user gets valid data by city id, example Kyiv, UA
-    public void testUserGetsValidWeatherDataById() {
+    //Test case 5:Verify, that the user gets valid data by city id, example Kyiv, UA
+    public void testUserGetsValidWeatherForKyivDataById() {
         GetWeatherById getWeatherById = new GetWeatherById(703448);
         getWeatherById.addParameter("appid", "18ea40b1276c29a5b18dff1d740509f4");
         getWeatherById.expectResponseStatus(HttpResponseStatusType.OK_200);
@@ -65,7 +75,7 @@ public class APITest implements IAbstractTest {
         getWeatherById.validateResponseAgainstSchema("_getweather/rs_weather.schema");
     }
     @Test
-    //Test case 5:Verify, that the user gets valid data by city id, example Madrid, ES
+    //Test case 6:Verify, that the user gets valid data by city id, example Madrid, ES
     public void testUserGetsValidWeatherForMadridDataById() {
         GetWeatherById getWeatherById = new GetWeatherById(6359304);
         getWeatherById.addParameter("appid", "18ea40b1276c29a5b18dff1d740509f4");
@@ -75,7 +85,7 @@ public class APITest implements IAbstractTest {
         getWeatherById.validateResponseAgainstSchema("_getweather/rs_weather.schema");
     }
     @Test
-    //Test case 6:Verify, that the user gets valid data by OneAPICall with free plan - requires a separate subscription to the One Call by Call plan
+    //Test case 7:Verify, that the user gets valid data by OneAPICall with free plan - requires a separate subscription to the One Call by Call plan
     public void testUserGetsValidWeatherByOneAPICall(){
         GetWeatherOneApiCall getWeatherOneApiCall = new GetWeatherOneApiCall(27.566668, 53.900002 );
         getWeatherOneApiCall.addParameter("appid", "18ea40b1276c29a5b18dff1d740509f4");
