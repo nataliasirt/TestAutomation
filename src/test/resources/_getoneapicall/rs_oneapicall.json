@@ -1,7 +1,7 @@
 {
     "lat": "regex:[\\d]+.[\\d]+",
     "lon": "regex:[\\d]+.[\\d]+",
-    "timezone": "Europe/Minsk",
+    "timezone": "Europe/London",
     "timezone_offset": "regex:[\\d]+",
     "current": {
         "dt": 1630415398,
