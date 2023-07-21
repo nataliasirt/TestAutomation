@@ -1,14 +1,8 @@
 package com.solvd.openweather;
-import com.solvd.openweather.api.GetWeatherById;
-import com.solvd.openweather.api.GetWeatherMethod;
-import com.solvd.openweather.api.GetWeatherMethodByLonLat;
-import com.solvd.openweather.api.GetWeatherOneApiCall;
 import com.zebrunner.carina.api.http.HttpResponseStatusType;
 import com.zebrunner.carina.core.IAbstractTest;
-import io.restassured.path.json.JsonPath;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import java.lang.invoke.MethodHandles;
 
