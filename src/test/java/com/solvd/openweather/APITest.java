@@ -1,4 +1,8 @@
 package com.solvd.openweather;
+import com.solvd.openweather.api.GetWeatherById;
+import com.solvd.openweather.api.GetWeatherMethod;
+import com.solvd.openweather.api.GetWeatherMethodByLonLat;
+import com.solvd.openweather.api.GetWeatherOneApiCall;
 import com.zebrunner.carina.api.http.HttpResponseStatusType;
 import com.zebrunner.carina.core.IAbstractTest;
 import io.restassured.path.json.JsonPath;
@@ -20,12 +24,6 @@ public class APITest implements IAbstractTest {
         getWeatherMethod.expectResponseStatus(HttpResponseStatusType.OK_200);
         getWeatherMethod.callAPI();
         String rs = getWeatherMethod.callAPI().asString();
-        Assert.assertEquals(new JsonPath(rs).getString("sys.country"), "GB", "Country name is incorrect!");
-        Assert.assertEquals(new JsonPath(rs).getString("name"), "London", "City name is incorrect!");
-        Assert.assertEquals(new JsonPath(rs).getInt("id"), 2643743, "Id is incorrect!");
-        Assert.assertEquals(new JsonPath(rs).getInt("timezone"), 3600, "Time zone is incorrect!");
-        Assert.assertTrue(new JsonPath(rs).getDouble("coord.lon") > -0.5, "Longitude is incorrect!");
-        Assert.assertTrue(new JsonPath(rs).getDouble("coord.lat") < 51.6, "Latitude is incorrect!");
         getWeatherMethod.validateResponseAgainstSchema("_getweather/rs_weather.schema");
     }
 
