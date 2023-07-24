@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.zebrunner</groupId>
-	<artifactId>carina-demo</artifactId>
+	<groupId>com.solvd.APITesting</groupId>
+	<artifactId>APITesting</artifactId>
 	<version>1.0</version>
 	<packaging>jar</packaging>
-	<name>Carina Demo</name>
-	<url>http://www.zebrunner.com/</url>
+	<name>APITesting</name>
+	<url>https://solvd.com</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -19,14 +19,14 @@
 		<carina-aws-s3.version>1.1.4</carina-aws-s3.version>
 		<carina-azure.version>1.1.4</carina-azure.version>
 		<carina-appcenter.version>1.1.4</carina-appcenter.version>
-
 		<java.version>11</java.version>
 		<zebrunner-agent.version>1.9.6</zebrunner-agent.version>
 		<suite>helloWorld</suite>
 	</properties>
 
 	<repositories>
-		<repository>
+		<!-- Uncomment only for testing any SNAPSHOT version of carina or zebrunner agent! -->
+		<!--repository>
 			<id>zebrunner_snapshots</id>
 			<name>zebrunner Snapshots</name>
 			<url>https://nexus.zebrunner.dev/repository/ce-snapshots/</url>
@@ -36,7 +36,7 @@
 			<snapshots>
 				<enabled>true</enabled>
 			</snapshots>
-		</repository>
+		</repository-->
 	</repositories>
 
 	<dependencies>
@@ -49,12 +49,6 @@
 			<groupId>com.zebrunner</groupId>
 			<artifactId>carina-dataprovider</artifactId>
 			<version>${carina-dataprovider.version}</version>
-			<exclusions>
-				<exclusion>
-					<groupId>org.testng</groupId>
-					<artifactId>*</artifactId>
-				</exclusion>
-			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>com.zebrunner</groupId>
@@ -110,7 +104,6 @@
 			<artifactId>postgresql</artifactId>
 			<version>42.5.3</version>
 		</dependency>
-
 	</dependencies>
 
 	<build>
@@ -121,6 +114,9 @@
 				<version>3.11.0</version>
 				<configuration>
 					<release>${java.version}</release>
+					<compilerArgs>
+						<arg>-parameters</arg>
+					</compilerArgs>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -137,15 +133,15 @@
 					</execution>
 				</executions>
 				<configuration>
-<!--					<artifactItems>-->
-<!--						<artifactItem>-->
-<!--							<groupId>com.zebrunner</groupId>-->
-<!--							<artifactId>agent-core</artifactId>-->
-<!--							<version>${zebrunner-agent.version}</version>-->
-<!--							<outputDirectory>${project.build.directory}/agent</outputDirectory>-->
-<!--							<destFileName>zebrunner-agent.jar</destFileName>-->
-<!--						</artifactItem>-->
-<!--					</artifactItems>-->
+					<artifactItems>
+						<artifactItem>
+							<groupId>com.zebrunner</groupId>
+							<artifactId>agent-core</artifactId>
+							<version>${zebrunner-agent.version}</version>
+							<outputDirectory>${project.build.directory}/agent</outputDirectory>
+							<destFileName>zebrunner-agent.jar</destFileName>
+						</artifactItem>
+					</artifactItems>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -153,7 +149,7 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>3.1.0</version>
 				<configuration>
-<!--					<argLine>-javaagent:${project.build.directory}/agent/zebrunner-agent.jar</argLine>-->
+					<argLine>-javaagent:${project.build.directory}/agent/zebrunner-agent.jar</argLine>
 					<useSystemClassLoader>false</useSystemClassLoader>
 					<suiteXmlFiles>
 						<suiteXmlFile>${project.build.directory}/test-classes/testng_suites/${suite}.xml</suiteXmlFile>

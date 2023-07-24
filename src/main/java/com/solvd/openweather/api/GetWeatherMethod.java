@@ -1,4 +1,4 @@
-package com.solvd.openweather;
+package com.solvd.openweather.api;
 import com.zebrunner.carina.api.AbstractApiMethodV2;
 import com.zebrunner.carina.api.annotation.Endpoint;
 import com.zebrunner.carina.api.annotation.RequestTemplatePath;
