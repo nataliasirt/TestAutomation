@@ -1,5 +1,5 @@
 package com.solvd.openweather;
-import com.solvd.openweather.web.*;
+import com.solvd.openweather.web.common.*;
 import com.zebrunner.carina.core.IAbstractTest;
 import com.zebrunner.carina.core.registrar.ownership.MethodOwner;
 import com.zebrunner.carina.core.report.testrail.TestRailCases;

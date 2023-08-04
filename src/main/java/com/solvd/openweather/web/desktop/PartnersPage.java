@@ -1,5 +1,6 @@
-package com.solvd.openweather.web;
+package com.solvd.openweather.web.desktop;
 
+import com.solvd.openweather.web.common.PartnersPageBase;
 import com.zebrunner.carina.utils.factory.DeviceType;
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
 import org.openqa.selenium.WebDriver;

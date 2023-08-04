@@ -1,4 +1,5 @@
-package com.solvd.openweather.web;
+package com.solvd.openweather.web.common;
+import com.solvd.openweather.web.common.HomePageBase;
 import com.zebrunner.carina.webdriver.gui.AbstractPage;
 import org.openqa.selenium.WebDriver;
 

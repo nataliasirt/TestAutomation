@@ -1,4 +1,4 @@
-package com.solvd.openweather.web;
+package com.solvd.openweather.web.common;
 
 import com.zebrunner.carina.webdriver.decorator.PageOpeningStrategy;
 import com.zebrunner.carina.webdriver.gui.AbstractPage;
